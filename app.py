@@ -19,7 +19,7 @@ def load_data():
     df['Close'].fillna(method='ffill', inplace=True)
     return df
 
-df = load_data("P625 DATASET.csv")
+ df = load_data("P625 DATASET.csv")
 # Historical Plot
 st.subheader("📊 Historical Close Prices")
 st.line_chart(df['Close'])
@@ -84,4 +84,5 @@ st.subheader("📅 Forecasted Prices")
 st.dataframe(forecast_df)
 
 st.success("SARIMA Forecast Generated Successfully ✅")
+
 
